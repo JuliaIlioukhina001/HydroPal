@@ -1,0 +1,44 @@
+
+# import torch
+# import torchvision
+
+# print(torch.__version__)
+# print(torchvision.__version__)
+import cv2
+import torch
+
+
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # or 'yolov5m', 'yolov5l', 'yolov5x'
+
+cap = cv2.VideoCapture(0)
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    
+    img_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+    
+    results = model(img_rgb)
+
+ 
+    for box in results.xyxy[0]:  
+        x1, y1, x2, y2, confidence, class_id = box[:6]
+        label = model.names[int(class_id)]
+
+        if confidence > 0.5 and label == "bottle":  
+            label_text = f'{label} {confidence:.2f}'
+            
+            cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (255, 0, 0), 2)
+            cv2.putText(frame, label_text, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
+
+    
+    cv2.imshow('YOLOv5 Bottle Detection', frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
