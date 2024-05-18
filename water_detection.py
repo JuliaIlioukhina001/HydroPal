@@ -7,14 +7,15 @@ metric = 0 #global variable to track the value
 
 def update_variable_periodically():
     global metric
-    time.sleep(20)  
-    metric = 0
-    print("Variable reset to initial value after another 10 seconds.")
+    while True:
+        time.sleep(30)  
+        metric = 0
+        print("Variable reset to initial value after another 10 seconds.")
 
 def hourly_decrease():
     global metric
     while True:
-        time.sleep(5)
+        time.sleep(10)
         metric=metric-1
 
 def main():
@@ -97,7 +98,11 @@ def main():
         # Display the frame
         cv2.imshow('YOLOv5 Bottle Detection', frame)
     
-        # checking if the bounding box of the bottle is inside the bounding box of the person
+        if (metric<0):
+            metric=0
+        elif (metric>10):
+            metric=10
+        print(f"Current value of update_variable: {metric}")
     
         # Exit on pressing 'q'
         if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -105,6 +110,9 @@ def main():
     
     cap.release()
     cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+     main()
 
 
 
