@@ -15,6 +15,7 @@ const ShopContextProvider = (props) => {
   };
 
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [userInfo, setuserInfo] = useState({})
 
 
   useEffect(() => {
@@ -35,7 +36,20 @@ const ShopContextProvider = (props) => {
     })
       .then((resp) => resp.json())
       .then((data) => {setCartItems(data)});
-    }
+      }
+      if(localStorage.getItem("auth-token")) 
+      {
+        fetch('http://localhost:4000/user-info', {
+        method: 'POST',
+        headers: {
+          Accept:'application/form-data',
+          'auth-token':`${localStorage.getItem("auth-token")}`,
+          'Content-Type':'application/json',
+        },
+      })
+      .then((resp) => resp.json()) 
+      .then((data) => {setuserInfo(data)})
+      }
 
 }, [])
   
@@ -58,7 +72,7 @@ const ShopContextProvider = (props) => {
   };
 
 
-  const contextValue = {products, cartItems, buyitems};
+  const contextValue = {products, cartItems, userInfo, buyitems};
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}
