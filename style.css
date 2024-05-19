@@ -1,0 +1,364 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    background-color: #cff4cf;
+    overflow: hidden;
+}
+
+
+.css-selector {
+    background: linear-gradient(244deg, #c5e9c5e6, #e0fcbd, #f4ffdc); 
+    background-size: 600% 600%;
+    -webkit-animation: gradientBkg 9s ease infinite;
+    animation: gradientBkg 9s ease infinite;
+}
+
+@-webkit-keyframes gradientBkg {
+    0%{background-position:0% 70%}
+    50%{background-position:100% 31%}
+    100%{background-position:0% 70%}
+}
+@keyframes gradientBkg {
+    0%{background-position:0% 70%}
+    50%{background-position:100% 31%}
+    100%{background-position:0% 70%}
+}
+
+.container {
+    position: relative;
+    height: 100vh; /* Bottom 1/3 of the screen */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 10rem;
+}
+
+.flower-pot {
+    opacity: 1;
+    max-width: 100%; 
+    max-height: 300px; 
+    display: block;
+    margin: auto; 
+}
+
+.stems {
+    opacity: '0';
+    position: absolute;
+    height: 150px; /* Match the height of the reduced pot */
+    max-width: 10%; /* Ensure it doesn't overflow horizontally */
+    top: 220px; /* increase this to make the flower go lower*/
+    left: 50%; /* center on x axis */
+    transform: translateX(-50%);
+    transition: opacity 3s;
+}
+
+#stem-long {
+    opacity: 0;
+    position: absolute;
+    height: 350px; /* Match the height of the reduced pot */
+    max-width: 100%; /* Ensure it doesn't overflow horizontally */
+    top: 20px; /* increase this to make the flower go lower*/
+    left: 52%; /* center on x axis */
+    transform: translateX(-50%);
+    transition: opacity 3s;
+}
+
+#stem-medium {
+    opacity: 0; 
+    position: absolute;
+    height: 270px; /* Match the height of the reduced pot */
+    max-width: 100%; /* Ensure it doesn't overflow horizontally */
+    top: 100px; /* increase this to make the flower go lower*/
+    left: 53%; /* center on x axis */
+    transform: translateX(-50%);
+    transition: opacity 3s;
+}
+
+#stem-mediumcrippled {
+    opacity: 0; 
+    position: absolute;
+    height: 270px; /* Match the height of the reduced pot */
+    max-width: 100%; /* Ensure it doesn't overflow horizontally */
+    top: 100px; /* increase this to make the flower go lower*/
+    left: 53%; /* center on x axis */
+    transform: translateX(-50%);
+    transition: opacity 3s;
+}
+
+
+.leaves {
+    opacity: 0;
+    position: absolute;
+    animation: rustle 1s infinite alternate;
+    height: 40%; /* Match the height of the reduced pot */
+    width: 15%; /* Ensure it doesn't overflow horizontally */
+    transform: translateX(-50%);
+    transition: opacity 3s;
+}
+
+#leaf1 { /*first leaf*/
+    --rotation-start: 80deg;
+    --rotation-end: 82deg;
+    opacity: 0;
+    height: 40%;
+    width: 15%;
+    transform: rotate(80deg);
+    top: 130px; /* increase this to make the flower go lower*/
+    left: 54.5%; /* center on x axis */
+}
+
+#leaf2 {
+    --rotation-start: 280deg;
+    --rotation-end: 282deg;
+    opacity: 0;
+    transform: rotate(280deg);
+    top: 120px; /* increase this to make the flower go lower*/
+    left: 27.5%; /* center on x axis */
+}
+
+#leaf6 {
+    --rotation-start: 70deg;
+    --rotation-end: 72deg;
+    opacity: 0;
+    width: 10%;
+    transform: rotate(70deg);
+    top: 90px; /* increase this to make the flower go lower*/
+    left: 55%; /* center on x axis */
+}
+
+#leaf3 {
+    --rotation-start: 295deg;
+    --rotation-end: 297deg;
+    opacity: 0;
+    transform: rotate(295deg);
+    top: 50px; /* increase this to make the flower go lower*/
+    left: 29%; /* center on x axis */
+}
+
+#leaf4 {
+    --rotation-start: 70deg;
+    --rotation-end: 72deg;
+    opacity: 0;
+    transform: rotate(70deg);
+    top: 100px; /* increase this to make the flower go lower*/
+    left: 55%; /* center on x axis */
+}
+
+#leaf5 {
+    --rotation-start: 60deg;
+    --rotation-end: 62deg;
+    opacity: 0;
+    transform: rotate(60deg);
+    top: 20px; /* increase this to make the flower go lower*/
+    left: 54%; /* center on x axis */
+}
+
+
+#leaf7 {
+    --rotation-start: 270deg;
+    --rotation-end: 268deg;
+    opacity: 0;
+    transform: rotate(270deg);
+    top: 90px; /* increase this to make the flower go lower*/
+    left: 30%; /* center on x axis */
+}
+
+#leaf8 {
+    --rotation-start: 310deg;
+    --rotation-end: 312deg;
+    opacity: 0;
+    transform: rotate(310deg);
+    top: -40px; /* increase this to make the flower go lower*/
+    left: 32%; /* center on x axis */
+}
+
+#leaf9 {
+    --rotation-start: 78deg;
+    --rotation-end: 80deg;
+    opacity: 0;
+    transform: rotate(80deg);
+    top: -70px; /* increase this to make the flower go lower*/
+    left: 54.5%; /* center on x axis */
+}
+
+#leaf10 {
+    --rotation-start: 90deg;
+    --rotation-end: 92deg;
+    opacity: 0;
+    transform: rotate(90deg);
+    top: 112px; /* increase this to make the flower go lower*/
+    left: 52.5%; /* center on x axis */
+
+}
+
+#leaf11 {
+    --rotation-start: 270deg;
+    --rotation-end: 272deg;
+    opacity: 0;
+    transform: rotate(270deg);
+    top: 90px; /* increase this to make the flower go lower*/
+    left: 32%; /* center on x axis */
+}
+
+#leaf12 {
+    --rotation-start: 310deg;
+    --rotation-end: 312deg;
+    opacity: 0;
+    transform: rotate(310deg);
+    top: -60px; /* increase this to make the flower go lower*/
+    left: 30%; /* center on x axis */
+}
+
+#leaf13 {
+    --rotation-start: 320deg;
+    --rotation-end: 318deg;
+    opacity: 0;
+    width: 13%;
+    transform: rotate(320deg);
+    top: -180px; /* increase this to make the flower go lower*/
+    left: 39%; /* center on x axis */
+}
+
+#flower1{
+    --rotation-start: 320deg;
+    --rotation-end: 315deg;
+    opacity: 0;
+    width: 10%;
+    height: 16%;
+    transform: rotate(320deg);
+    top: 40px; /* increase this to make the flower go lower*/
+    left: 30%; /* center on x axis */
+}
+
+#flower2{
+    --rotation-start: 90deg;
+    --rotation-end: 95deg;
+    opacity: 0;
+    width: 8%;
+    height: 15%;
+    top: 100px; /* increase this to make the flower go lower*/
+    left: 65%; /* center on x axis */
+}
+
+#flower3{
+    --rotation-start: 277deg;
+    --rotation-end: 285deg;
+    opacity: 0;
+    width: 10%;
+    height: 16%;
+    top: 200px; /* increase this to make the flower go lower*/
+    left: 30%; /* center on x axis */
+}
+
+#flower4{
+    --rotation-start: 17deg;
+    --rotation-end: 25deg;
+    opacity: 0;
+    width: 7%;
+    height: 10%;
+    top: 185px; /* increase this to make the flower go lower*/
+    left: 58%; /* center on x axis */
+}
+
+#flower5{
+    --rotation-start: 17deg;
+    --rotation-end: 25deg;
+    opacity: 0;
+    width: 8%;
+    height: 12%;
+    transform: rotate(320deg);
+    top: 130px; /* increase this to make the flower go lower*/
+    left: 25%; /* center on x axis */
+}
+
+#flower6{
+    --rotation-start: 90deg;
+    --rotation-end: 80deg;
+    opacity: 0;
+    width: 10%;
+    height: 16%;
+    transform: rotate(320deg);
+    top: 30px; /* increase this to make the flower go lower*/
+    left: 57%; /* center on x axis */
+}
+
+#crippledleaf1 {
+    --rotation-start: 273deg;
+    --rotation-end: 270deg;
+    opacity: 0;
+    width: 13%;
+    transform: rotate(320deg);
+    top: 100px; /* increase this to make the flower go lower*/
+    left: 29%; /* center on x axis */
+}
+
+#crippledleaf2 {
+    --rotation-start: 98deg;
+    --rotation-end: 100deg;
+    opacity: 0;
+    width: 13%;
+    top: 450px; /* increase this to make the flower go lower*/
+    left: 53%; /* center on x axis */
+}
+
+#crippledleaf3 {
+    --rotation-start: 92deg;
+    --rotation-end: 90deg;
+    opacity: 0;
+    width: 13%;
+    transform: rotate(320deg);
+    top: 250px; /* increase this to make the flower go lower*/
+    left: 50%; /* center on x axis */
+}
+
+#crippledleaf4 {
+    --rotation-start: 92deg;
+    --rotation-end: 90deg;
+    opacity: 0;
+    width: 13%;
+    transform: rotate(320deg);
+    top: 140px; /* increase this to make the flower go lower*/
+    left: 54%; /* center on x axis */
+}
+
+.animated {
+    /* display: block; */
+    opacity: 0;
+    animation: rustle 1s infinite alternate;
+    position: absolute;
+    height: 270px; /* Match the height of the reduced pot */
+    width: 27%; /* Ensure it doesn't overflow horizontally */
+    top: 100px; /* increase this to make the flower go lower*/
+    left: 55%; /* center on x axis */
+    transform: translateX(-50%);
+    transition: opacity 3s;
+}
+
+
+@keyframes rustle {
+    0% { transform: translateX(0%) rotate(var(--rotation-start)); }
+    100% { transform: translateX(0%) rotate(var(--rotation-end)); }
+}
+
+/* set default opacity to 0
+/* css will know to apply this transition when going from visibilie to hidden state*/
+
+
+/* leaf 1 */
+/* opacity = 0 */
+/* clarify the position */
+/* if x = 7 */
+/*  opcacity = 1*/
+/* transition: opacity 3s*/
+
+
+/* */
+/* if x = 1 */
+/* if x = 2 */
+/* if x = 3 */
+
+/* opacity: 1 -> opacity: 0 in 2 seconds */
+/* transition: opacity 2s  - add to leaves */ 
