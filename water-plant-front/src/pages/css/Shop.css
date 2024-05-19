@@ -1,0 +1,53 @@
+.coin-counter {
+    display: flex;
+    align-items: center;
+    border: 1px solid green;
+    background-color: grey;
+    border-radius: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 2px;
+    position: relative; 
+    top: 10px;
+    left: 10px;
+    float: left;
+}
+
+.coin-counter img{
+    height: 50px;
+    width: 50x;
+    position: relative;
+    right: 4px;
+}
+.coin-counter h1 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    position: relative;
+    right: 8px;
+    bottom: 1px;
+
+}
+
+.shopcategory-products{
+    position: relative;
+    top: 150px;
+    right: 50px;
+    margin-top: 20px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    height: 500px;
+    width: 1605px;
+    overflow-x: scroll;
+    overflow-x: scroll;
+    overflow-y: visible;
+    padding-bottom: 250px;
+    margin-bottom: -250px;
+}
+.shopcategory-products::-webkit-scrollbar {
+    display: none;
+}
