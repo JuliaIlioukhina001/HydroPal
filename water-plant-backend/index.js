@@ -146,7 +146,7 @@ app.post('/signup', async (req, res) => {
             name: req.body.username,
             email: req.body.email,
             password: req.body.password,
-            coins: 0,
+            coins: 9,
             giftData: gift,
             cryptokey: "",
 
@@ -173,12 +173,15 @@ app.get("/allgifts", async (req, res) => {
 //Create an endpoint for saving the product in cart
 app.post('/buy', fetchuser, async (req, res) => {
 	console.log("bought");
-    let userData = await Users.findOne({_id:req.user.id});
-    let productData = await Product.findOne({_id: req.body.itemId})
-    if (userData.coins >= productData.coins){
-
-      userData.giftData[req.body.itemId] = 1;
-      await Users.findOneAndUpdate({_id:req.user.id}, {cartData:userData.cartData});
+    let userData = await Users.findOne({_id: req.user.id});
+    let productData = await Product.findOne({id: req.body.itemId});
+    console.log(parseInt(userData.coins));
+    if (parseInt(userData.coins) >= productData.coins)
+    {
+      userData.coins -= productData.coins;
+      userData.giftData[req.body.itemId] += 1;
+      await Users.findOneAndUpdate({_id:req.user.id}, {giftData:userData.giftData});
+      await Users.findOneAndUpdate({_id: req.user.id}, {coins: userData.coins});
       res.send("Added")
 
     } else {
