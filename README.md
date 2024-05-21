@@ -3,5 +3,6 @@ The app uses machine learning to monitor your water intake while you are working
 ![image](https://github.com/JuliaIlioukhina001/HydroPal/assets/158779967/dd30c502-5dd3-43d8-b342-5fadf0f7c36c)
 ![image](https://github.com/JuliaIlioukhina001/HydroPal/assets/158779967/43b24f3e-aeb9-43df-888c-2440166fc764)
 
-![image](https://github.com/JuliaIlioukhina001/HydroPal/assets/158779967/efd71726-2bc5-4abe-90c0-b77b48ee1c96)
-
+![image](https://github.com/JuliaIlioukhina001/HydroPal/assets/158779967/793cbaa4-e879-49b7-b311-c1941d9bf7be)
+![image](https://github.com/JuliaIlioukhina001/HydroPal/assets/158779967/87b13f47-3953-4204-bb0f-8cc8e401505b)
+![image](https://github.com/JuliaIlioukhina001/HydroPal/assets/158779967/1c93a509-13cd-4e7b-8edb-70b9065a00ec)
