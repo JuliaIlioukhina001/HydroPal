@@ -1,2 +1,2 @@
 # HydroPal
-Chrome extension that encourages users to drink water with a dynamically changing plant and a crypto token earning system.
+The app uses machine learning to monitor your water intake while you are working on your laptop. Every time you drink water, your virtual plant grows. Yet, for every hour without water consumption, the size of the plant automatically decreases. If you manage to get your plant to reach the maximum daily size, you EARN METIS TOKENS. These tokens can be used to unlock unique decorations for your plant or to gift points to friends, making this a rewarding experience.
