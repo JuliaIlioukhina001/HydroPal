@@ -1,5 +1,16 @@
 # HydroPal
 The app uses machine learning to monitor your water intake while you are working on your laptop. Every time you drink water, your virtual plant grows. Yet, for every hour without water consumption, the size of the plant automatically decreases. If you manage to get your plant to reach the maximum daily size, you EARN METIS TOKENS. These tokens can be used to unlock unique decorations for your plant or to gift points to friends, making this a rewarding experience.
+
+
+# How it works:
+
+
+
+https://github.com/JuliaIlioukhina001/HydroPal/assets/106818193/32fd2250-dbaa-4124-96e7-53220f3326dd
+
+
+
+
 ![image](https://github.com/JuliaIlioukhina001/HydroPal/assets/158779967/dd30c502-5dd3-43d8-b342-5fadf0f7c36c)
 ![image](https://github.com/JuliaIlioukhina001/HydroPal/assets/158779967/43b24f3e-aeb9-43df-888c-2440166fc764)
 
